@@ -17,7 +17,7 @@ namespace Pack.Clc
                 "'-' - subtraction\t(вычитание)\n" +
                 "'/' - division\t\t(деление)\n" +
                 "'*' - multiplication\t(умножение)\n" +
-                "'%' - percent\t\t(процент)\n" +
+                "'%' - percent\t\t(процент) можно добавлять со второго вводимого значения (например 10%)\n" +
                 "\n" +
                 "the 'enter' key completes the input (клавиша 'enter' завершает ввод)");
 

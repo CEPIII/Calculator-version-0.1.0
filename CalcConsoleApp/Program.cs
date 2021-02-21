@@ -18,12 +18,13 @@ namespace CalcConsoleApp
 
 
 
-
+            string exit = "exit";
             bool boolInput;
+            string tempStr;
             do
             {   //Ввести самое первое число
                 Write("Enter a number (введите число): ");
-                string tempStr = ReadLine();
+                tempStr = ReadLine();
                 decimal num;
                 boolInput = decimal.TryParse(tempStr, out num);
                 if (boolInput)
@@ -32,11 +33,40 @@ namespace CalcConsoleApp
                 }
                 else
                 {
-                    WriteLine("Invalid input. (Не корректный ввод.)\n");
+                    OutputMessage.InvalidInput();
+                    //WriteLine("Invalid input. (Не корректный ввод.)\n");
                 }
             } while (!boolInput);
+            tempStr = "";
+            boolInput = false;
+
+
+            // нужно ввести оператор и далее выполнить соответствующее действие
+
+            do
+            {
+                Write("Enter a operator (введите оператор +,-,*,/): ");
+                tempStr = ReadLine();
+                switch (tempStr)
+                {
+                    case "+":
+                        total = Funktion.Summ(total);
+                        break;
+                    case "-":
+                        total = Funktion.Subtraction(total);
+                        break;
+                    case "*":
+                        total = Funktion.Summ(total);
+                        break;
+                    case "/":
+                        total = Funktion.Subtraction(total);
+                        break;
+                }
+            } while (tempStr != exit);
 
             WriteLine($"total = {total}");
+
+
             
             
         }

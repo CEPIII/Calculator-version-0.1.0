@@ -4,7 +4,7 @@ using static System.Console;
 
 namespace Pack.Clc
 {
-    public class Funktion
+    public static class Funktion
     {
 /*
         public static void EnterNumber()
@@ -23,7 +23,28 @@ namespace Pack.Clc
                 
             }
 */
-        
+        public static decimal Summ(decimal tota1)
+        {
+            decimal inputDec = 0;
+            return tota1 + inputDec;
+        }
 
+        public static decimal Subtraction(decimal tota1)
+        {
+            decimal inputDec = 0;
+            return tota1 - inputDec;
+        }
+
+        public static decimal Multiplication(decimal tota1)
+        {
+            decimal inputDec = 0;
+            return tota1 * inputDec;
+        }
+
+        public static decimal Division(decimal tota1)
+        {
+            decimal inputDec = 0;
+            return tota1 / inputDec;
+        }
     }
 }
