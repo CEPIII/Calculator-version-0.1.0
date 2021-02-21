@@ -5,7 +5,7 @@ using static System.Console;
 
 namespace Pack.Clc
 {
-    public class OutputMessage
+    public static class OutputMessage
     {
         public static void InvalidInput()
         {

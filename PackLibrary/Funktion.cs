@@ -25,8 +25,12 @@ namespace Pack.Clc
 */
         public static decimal Summ(decimal tota1)
         {
+            string tempStr = ReadLine();
+
             decimal inputDec = 0;
-            return tota1 + inputDec;
+            decimal totaal = tota1 + inputDec;
+            return totaal;
+            WriteLine($"Result = {totaal}");
         }
 
         public static decimal Subtraction(decimal tota1)

@@ -1,7 +1,7 @@
 ﻿using System;
 using Pack.Clc;
 using static System.Console;
-
+using static Pack.Clc.OutputMessage;
 
 namespace CalcConsoleApp
 {    
@@ -33,7 +33,7 @@ namespace CalcConsoleApp
                 }
                 else
                 {
-                    OutputMessage.InvalidInput();
+                    InvalidInput();
                     //WriteLine("Invalid input. (Не корректный ввод.)\n");
                 }
             } while (!boolInput);
@@ -61,6 +61,10 @@ namespace CalcConsoleApp
                     case "/":
                         total = Funktion.Subtraction(total);
                         break;
+                    default:
+                        InvalidInput();
+                        break;
+
                 }
             } while (tempStr != exit);
 
