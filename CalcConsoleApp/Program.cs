@@ -63,14 +63,12 @@ namespace CalcConsoleApp
                         total = Funktion.Subtraction(total);
                         break;
                     default:
-                        WriteLine("\nВведенное значение не является опператором");
-                        if (tempStr == exit) WriteLine("Вы ввели 'exit'");
-                            WriteLine($"Результат всех вычеслениий total = {total}\n");
-                            /*if (tempStr != exit)
-                            {
-                                InvalidInput();
-                            }*/
-                        
+                        WriteLine("\nВведенное значение не является оператором");
+                        if (tempStr == exit) 
+                        { 
+                            WriteLine("Вы ввели 'exit'"); 
+                        }
+                            WriteLine($"Результат всех вычеслениий total = {total}\n");                          
                         break;
 
                 }

@@ -45,14 +45,32 @@ namespace Pack.Clc
             } while (!boolNum);
 
             WriteLine($"Результат вычеслений Result = {total}");
-            return total;
-            
+            return total;            
         }
 
         public static decimal Subtraction(decimal tota1)
         {
-            decimal inputDec = 0;
-            return tota1 - inputDec;
+            bool boolNum = false;
+            decimal total = tota1;
+            decimal inputDec;
+            do
+            {
+                WriteLine("\nВведите числовое значение");
+                string tempStr = ReadLine();
+
+                boolNum = decimal.TryParse(tempStr, out inputDec);
+                if (boolNum)
+                {
+                    total -= inputDec;
+                }
+                else
+                {
+                    InvalidInput();
+                }
+            } while (!boolNum);
+
+            WriteLine($"Результат вычеслений Result = {total}");
+            return total;
         }
 
         public static decimal Multiplication(decimal tota1)
