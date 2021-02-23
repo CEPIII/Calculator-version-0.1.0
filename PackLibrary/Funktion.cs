@@ -115,11 +115,14 @@ namespace Pack.Clc
                 }
                 else
                 {
-                    if(inputDec == 0)
+                    if (inputDec == 0)
                     {
                         WriteLine("\nНа ноль делить нельзя, введите другое число");
                     }
-                    InvalidInput();
+                    else
+                    {
+                        InvalidInput();
+                    }
                 }
             } while (!boolNum || inputDec == 0);
 
