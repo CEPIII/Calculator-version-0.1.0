@@ -30,7 +30,7 @@ namespace Pack.Clc
             decimal inputDec;
             do
             {
-                WriteLine("\nВведите числовое значение");
+                Write("\nВведите числовое значение:  ");
                 string tempStr = ReadLine();
                 
                 boolNum = decimal.TryParse(tempStr, out inputDec);
@@ -55,7 +55,7 @@ namespace Pack.Clc
             decimal inputDec;
             do
             {
-                WriteLine("\nВведите числовое значение");
+                Write("\nВведите числовое значение:  ");
                 string tempStr = ReadLine();
 
                 boolNum = decimal.TryParse(tempStr, out inputDec);
@@ -80,7 +80,7 @@ namespace Pack.Clc
             decimal inputDec;
             do
             {
-                WriteLine("\nВведите числовое значение");
+                Write("\nВведите числовое значение:  ");
                 string tempStr = ReadLine();
 
                 boolNum = decimal.TryParse(tempStr, out inputDec);
@@ -105,7 +105,7 @@ namespace Pack.Clc
             decimal inputDec;
             do
             {
-                WriteLine("\nВведите числовое значение");
+                Write("\nВведите числовое значение:  ");
                 string tempStr = ReadLine();
 
                 boolNum = decimal.TryParse(tempStr, out inputDec);
