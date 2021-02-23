@@ -57,10 +57,10 @@ namespace CalcConsoleApp
                         total = Funktion.Subtraction(total);
                         break;
                     case "*":
-                        total = Funktion.Summ(total);
+                        total = Funktion.Multiplication(total);
                         break;
                     case "/":
-                        total = Funktion.Subtraction(total);
+                        total = Funktion.Division(total);
                         break;
                     default:
                         WriteLine("\nВведенное значение не является оператором");
