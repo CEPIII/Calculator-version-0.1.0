@@ -45,6 +45,7 @@ namespace CalcConsoleApp
 
             do
             {
+                WriteLine("\nВведите 'exit' для завершения приложения, либо");
                 Write("Enter a operator (введите оператор +,-,*,/): ");
                 tempStr = ReadLine();
                 switch (tempStr)
@@ -62,13 +63,20 @@ namespace CalcConsoleApp
                         total = Funktion.Subtraction(total);
                         break;
                     default:
-                        InvalidInput();
+                        WriteLine("\nВведенное значение не является опператором");
+                        if (tempStr == exit) WriteLine("Вы ввели 'exit'");
+                            WriteLine($"Результат всех вычеслениий total = {total}\n");
+                            /*if (tempStr != exit)
+                            {
+                                InvalidInput();
+                            }*/
+                        
                         break;
 
                 }
             } while (tempStr != exit);
 
-            WriteLine($"total = {total}");
+            //WriteLine($"total = {total}");
 
 
             

@@ -1,6 +1,6 @@
 ﻿using System;
 using static System.Console;
-
+using static Pack.Clc.OutputMessage;
 
 namespace Pack.Clc
 {
@@ -25,12 +25,28 @@ namespace Pack.Clc
 */
         public static decimal Summ(decimal tota1)
         {
-            string tempStr = ReadLine();
+            bool boolNum = false;
+            decimal total = tota1;
+            decimal inputDec;
+            do
+            {
+                WriteLine("\nВведите числовое значение");
+                string tempStr = ReadLine();
+                
+                boolNum = decimal.TryParse(tempStr, out inputDec);
+                if (boolNum)
+                {                    
+                    total += inputDec;
+                }
+                else
+                {
+                    InvalidInput();
+                }
+            } while (!boolNum);
 
-            decimal inputDec = 0;
-            decimal totaal = tota1 + inputDec;
-            return totaal;
-            WriteLine($"Result = {totaal}");
+            WriteLine($"Результат вычеслений Result = {total}");
+            return total;
+            
         }
 
         public static decimal Subtraction(decimal tota1)

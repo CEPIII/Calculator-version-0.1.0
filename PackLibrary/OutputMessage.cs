@@ -9,7 +9,7 @@ namespace Pack.Clc
     {
         public static void InvalidInput()
         {
-            WriteLine("Invalid input. (Не корректный ввод.)\n");
+            WriteLine("\nInvalid input. (Не корректный ввод.)\n");
         }
 
 
