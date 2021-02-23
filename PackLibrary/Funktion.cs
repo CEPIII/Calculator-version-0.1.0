@@ -100,8 +100,31 @@ namespace Pack.Clc
 
         public static decimal Division(decimal tota1)
         {
-            decimal inputDec = 0;
-            return tota1 / inputDec;
+            bool boolNum = false;
+            decimal total = tota1;
+            decimal inputDec;
+            do
+            {
+                WriteLine("\nВведите числовое значение");
+                string tempStr = ReadLine();
+
+                boolNum = decimal.TryParse(tempStr, out inputDec);
+                if (boolNum && inputDec != 0)
+                {
+                    total/= inputDec;
+                }
+                else
+                {
+                    if(inputDec == 0)
+                    {
+                        WriteLine("\nНа ноль делить нельзя, введите другое число");
+                    }
+                    InvalidInput();
+                }
+            } while (!boolNum || inputDec == 0);
+
+            WriteLine($"Результат вычеслений Result = {total}");
+            return total;
         }
     }
 }
